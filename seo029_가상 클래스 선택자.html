@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        .foo:nth-child(2n+1) {
+            color: red;
+        }
+        /* nth-child() 의사 클래스는 형제 사이에서의 순서에 따라 요소를 선택합니다. */
+        
+        /* 적용해보기
+        1. odd(홀)/even(짝)
+        2. 2n+1(홀) / 2n(짝)
+        3. 3n+1(중간에 두칸 띄고 적용 - 1번 & 4번 & 7번..)
+        4. 4n+1(중간에 세칸 띄고 적용 - 1번 & 5번 & 9번..)  */
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="foo">1</li>
+        <li class="foo">2</li>
+        <li class="foo">3</li>
+        <li class="foo">4</li>
+        <li class="foo">5</li>
+    </ul>
+</body>
+</html>
