@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin과 padding</title>
+    <style>
+        body {
+            margin: 0;
+            /* 0일 경우, px을 주지 않아도 됨. */
+            /* 바깥쪽 여백: margin / 안쪽 여백: padding */
+            }
+
+        h1 {
+            border: solid 1px black;
+
+            /* padding:10px 20px 30px 40px;
+            : 북쪽을 기준으로 시계방향으로 돌아가며 적용(북-동-남-서)
+            =>  padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 30px;
+                padding-left: 40px; */
+
+            /* padding:10px 20px 30px
+            : 북 10px, 좌우 20px, 남 30px */
+
+            padding:10px 200px
+            /* : 상하 10px, 좌우 200px */
+
+            /* margin:10px 10px 20px 20px;*/
+        
+            margin: 10px;
+            /* margin은 서로 같은 마진일 경우 합쳐서 10px 적용
+            서로 다를 경우, 큰 마진이 작은 마진을 포함한다. */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+</body>
+</html>

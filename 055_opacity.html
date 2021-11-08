@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity</title>
+    <!-- 
+        opacity CSS 속성은 요소의 불투명도를 설정합니다. 불투명도는 요소 뒤쪽 콘텐츠가 숨겨지는 정도로, 투명도의 반대입니다.
+    -->
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background: pink;
+        }
+        
+        .box-opacity1 {
+            position: absolute;
+            top: 0;
+            opacity: 0.8;
+        }
+
+        .box-opacity2 {
+            position: absolute;
+            top:100px;
+            opacity: 0.5;
+        }
+
+        .box-opacity3 {
+            position: absolute;
+            top:200px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <h1>h<br>e<br>l<br>l<br>o</h1>
+    <div class="box box-opacity1"></div>
+    <div class="box box-opacity2"></div>
+    <div class="box box-opacity3"></div>
+    <!-- .box.box-opacity$*3 -->
+</body>
+</html>
