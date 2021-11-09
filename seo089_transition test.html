@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transition Test</title>
+  <style>
+		.box{
+			width:100px;
+			height:100px;
+			background:dodgerblue;
+			transition:all 1s;
+			/* transform-origin:left top; */
+            transform-origin: right;
+            /* transform-origin : 기준이 되는 점의 지점을 뜻함 / left top: 왼쪽 상단 모서리 */
+		}
+		.box:hover{
+			transform:rotate(360deg);
+            /* (돌아가는 각도 deg) */
+		}
+
+  </style>
+</head>
+<body>
+  <div class="box">hello world</div>
+</body>
+</html>
