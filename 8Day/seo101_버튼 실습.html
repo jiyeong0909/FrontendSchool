@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button 실습</title>
+    <style>
+        div {
+            position: relative;
+            color: blue;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            width: 200px;
+            height: 50px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .c1::before {
+            content: 'Click!';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: yellow;
+            background-color: blue;
+            transition: all 1s;
+            transform: rotate(360deg);
+        }
+
+        .c1:hover::before {
+            transform: rotate(0);
+            cursor: pointer;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">hello!!</div>
+</body>
+</html>
