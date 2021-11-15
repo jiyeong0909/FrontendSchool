@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print, screen</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        @media print {
+            abbr::after {
+                content: '('attr(title)')';
+            }
+        }
+
+        @media screen and (-webkit-device-pixel-ratio : 2) {
+            body{
+                background: royalblue;}
+        /* -webkit-device-pixel-ratio : 1 보다 -webkit-device-pixel-ratio : 2 의 글씨가 더 가늘게 보임 */
+        }
+
+        div {
+            margin: 50px;
+            width: 1px;
+            height: 1px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
