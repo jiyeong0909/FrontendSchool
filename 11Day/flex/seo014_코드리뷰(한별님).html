@@ -1,0 +1,87 @@
+<!-- 한별님 코드 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>menu bar pratice</title>
+</head>
+<style>
+  *{
+    box-sizing: border-box;
+    }
+    body{
+    display: flex;
+    }
+
+    .container{
+    margin: 30px;
+    border: 2px solid black;
+    }
+
+    header{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    color:red;
+    border: 3px solid red;
+    padding: 20px;
+    }
+
+    .middle{
+    display: flex;
+    }
+
+    .middle-left{
+    flex: 7;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight:500;
+    color:red;
+    border: 3px solid red;
+    padding: 70px;
+    }
+
+    aside{
+    flex: 3;
+    text-align: center;
+    font-size:1.5rem;
+    font-weight:500;
+    color: red;
+    border: 3px solid red;
+    padding: 30px;
+    padding-top: 80px;
+    }
+
+    footer {
+    display: flex;
+    justify-content: center;
+    font-size:1.5rem;
+    font-weight:500;
+    color:red;
+    border: 3px solid red;
+    padding: 20px;
+    }
+
+    @media screen and (min-width:700px) {
+        .container{
+        width: 100%;
+        }
+    }
+
+
+</style>
+<body>
+    <div class="container">
+    <header>i am header</header>
+    <section class="middle">
+        <article class="middle-left">section > article</article>
+        <aside>aside</aside>
+    </section>
+    <footer>i am footer</footer>
+</div>
+</body>
+</html>
