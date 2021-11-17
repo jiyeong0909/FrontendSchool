@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codepen-clone-2</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        header {
+            flex: 1;
+        }
+
+        .section-board {
+            transform: rotateX(60deg) rotateY(-10deg) rotateZ(50deg);
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .board-item {
+            position: relative;
+            top: 0;
+            left: 0;
+            /* codepen-clone-1 과 비교해서 top, left가 추가됨.
+            top, left를 활성화시키지 않으면 그림자가 함께 올라가는 현상이 나타남 */
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+        }
+
+        .board-item:hover {
+            cursor: pointer;
+            /* transform: translate(10px, -10px); */
+            top: -15px;
+            left: -15px;
+            /* top, left를 활성화시키지 않으면 그림자만 내려가는 현상이 나타남 */
+        }
+        
+        .board-item::after {
+            /* position: fixed; -> 활성화와 비활성화 차이가 없어보임. */
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #999;
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+        }
+
+        .board-item:hover::after {
+            top: 25px;
+            left: 25px;
+            /* 도형과 그림자의 사이를 벌려주는 효과 */
+            /* 그림자가 도형을 따라 올라가는 것을 방지 */
+        }
+
+        .board-item:nth-child(3n) {
+            background-color: blanchedalmond;
+        }
+
+        .board-item:nth-child(3n-1) {
+            background-color: darkblue;
+        }
+
+        .board-item:nth-child(3n-2) {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>codepen 실습</h1>
+    </header>
+    <section class="section-board">
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+    </section>
+</body>
+</html>

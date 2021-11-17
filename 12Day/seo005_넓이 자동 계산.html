@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넓이 자동 계산</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .item:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+        }
+
+        .item:nth-child(2) {
+            background-color: darkgreen;
+            /* width: calc(100% - 400px); */
+            /* 100% 에서 400px을 제외한 부분을 darkgreen 이 차지함. */
+            /* width: calc(80vw - 400px); */
+            /* width: calc(70% - 400px); */
+            width: min(500px, 50vw);
+            /* width: min(500px, 50vw) : 둘 중에 작은 것을 사용함. */
+            /* min-width: 500px; */
+            /* min-width : 최소한의 넓이 보장 */
+            /* width: 200vmin -> 200vmin 이하로 줄어들지않도록 함. */
+
+            /* vmin, vmax 참고 : https://webclub.tistory.com/356 */
+        }
+    </style>
+</head>
+<body>
+    <!-- https://developer.mozilla.org/ko/docs/Web/CSS/calc() -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/min() -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/max() -->
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html> 
