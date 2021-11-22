@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉트 박스 실습</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <style>
+        h2 {
+            margin: 30px;
+        }
+
+        .btn-select {
+            width: 200px;
+            height: 40px;
+            background: #fff;
+            color: #000;
+            border: 1px solid #9B51E0;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .list-member {
+            display: none;
+            width: 200px;
+            background: #FFFFFF;
+            border: 1px solid #C4C4C4;
+            box-sizing: border-box;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .list-member.on {
+            display: block;
+        }
+
+        .btn-select:active+.list-member {
+            display: block;
+        }
+
+        .list-member li {
+            height: 40px;
+            width: 200px;
+        }
+
+        .list-member li button {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            border: none;
+        }
+
+        .list-member li button:hover {
+            border-radius: 8px;
+            background-color: #F8E4FF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>셀렉트 박스 실습</h2>
+    <button class="btn-select">최애 프로그래밍 언어</button>
+    <ul class="list-member">
+        <li><button type="button">Python</button></li>
+        <li><button type="button">Jave</button></li>
+        <li><button type="button">JaveScript</button></li>
+        <li><button type="button">C#</button></li>
+        <li><button type="button">C/C++</button></li>
+    </ul>
+
+    <script>
+        const btn = document.querySelector('.btn-select');
+        const list = document.querySelector('.list-member');
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('on');
+        });
+        list.addEventListener('click', (event) => {
+            if (event.target.nodeName === "BUTTON") {
+                btn.innerText = event.target.innerText;
+                btn.classList.remove('on');
+            }
+        });
+    </script>
+</body>
+
+</html>
