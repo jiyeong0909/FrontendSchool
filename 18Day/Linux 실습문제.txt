@@ -1,0 +1,27 @@
+https://paullabworkspace.notion.site/4-bf1d0ebc2a874e898b733006dd314f14
+(문제)
+-----------------------------------------------------------------------------------
+(self)
+1. alias
+2. unalias ls
+3. u
+4. tab
+5. sudo apt install tree / tree
+6. cat a | grep ".js"
+7. 
+8. pwd
+9. cd a /mv one.txt change.txt
+10. mv change.txt b/
+-----------------------------------------------------------------------------------
+(answer)
+1. alias ls='ls -a'
+2. unalias ls
+3. 방향키 위를 누르고 오류가 난 명령어가 나오면 수정해서 다시 입력한다!
+4. tab
+5. apt-get install tree / tree
+6. find . -name '*.txt'
+7. find . -name '*.txt' > result.txt
+8. pwd
+9-1. cd a
+9-2. mv one.txt change.txt 
+10. mv change.txt ../b/change.txt
