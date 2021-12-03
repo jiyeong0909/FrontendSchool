@@ -1,0 +1,390 @@
+## 변수(타입, typeof로 확인 가능)
+- Array(배열) 
+    * 형태 : ['하나', '둘', '셋'], [100, 200, 300],
+    * 호출 : 변수명, 변수명[0], 변수명[0][0] (변수명[index])
+    * 메서드 : 
+        * length
+        * forEach(콜백함수)
+        * map
+        * filter
+        * push / pop - mutable
+        * slice - immutable
+        * splice - mutable
+        * reduce - immutable
+        * join
+        * indexOf
+        * includes
+        * find
+        * concat
+        * every
+        * some
+        * fill — mutable
+        * shift — mutable
+        * unshift — mutable
+        * reverse — mutable
+        * sort — mutable
+- String(문자열)
+    * 형태 : 'abcde', "abcde", `abcde`
+    * 호출 : 변수명, 변수명[0] (변수명[index])
+    * 메서드 : 
+        * str.length
+        * str.indexOf()
+        * str.lastIndexOf()
+        * str.includes()
+        * str.split()
+        * str.substring()
+        * str.substr()
+        * str.toLowerCase()
+        * str.toUpperCase()
+        * str.trim()
+        * str.math()
+        * str.replace()
+        * str.concat()
+- Number(숫자)
+    * 형태 : 10, 10.123
+    * 호출 : 변수명
+    * 메서드 : 
+        * num.toString
+        * num.toFixed()
+        * Number.IsInteger
+        * Number()
+    * parseInt(), parseFloat()
+    * Math
+        * Math.max()
+        * Math.min()
+        * Math.floor()
+        * Math.round()
+        * Math.random()
+        * Math.abs()
+        * Math.sqrt()
+        * Math.pow()
+- Boolean(논리값)
+    * 형태 : true, false
+    * 호출 : 변수명
+    * 메서드 : 
+- Object(객체)
+    * 형태 : 
+        ```javascript
+        {
+            "지역이름": "전국",
+            "확진자수": 24889,
+            "격리해제수": 23030,
+            "사망자수": 438,
+            "십만명당발생율": 48.0
+        }
+        ```
+    * 호출 : 변수명, 변수명.지역이름, 변수명['지역이름'] (변수명.key, 변수명[key])
+    * 속성 : 
+    ```js
+    console.log(Object.getOwnPropertyDescriptor(person, 'name'));
+    Object.getOwnPropertyDescriptors(person)
+    // {10: {…}, name: {…}, age: {…}, height: {…}, weight: {…}, 이력: {…}}
+    // value: '이호준',
+    // writable: true, // 변경 가능 여부, 기본값 false
+    // enumerable: true, // 열거(for) 가능 여부, 기본값 false
+    // configurable: true // 재정의 가능 여부, 기본값 false
+    ```
+    * 메서드 : Object.keys, Object.values, Object.
+- undefine : undefind
+- null : object
+- NaN : number
+- Map : object
+    * 메서드 : set, get, has, delete, has, size
+- Set : object
+    * 메서드 : add, has, delete, has, size
+
+## 산술연산
+- `+`
+- `-`
+- `/`
+- `*`
+- `**`
+- `%`
+
+## 논리연산
+- `!`
+- `&&`
+- `||`
+
+## 비교연산
+- `==`
+- `!=`
+- `>`
+- `>=`
+- `>`
+- `<=`
+- `<`
+- `===`
+- `!==`
+
+## 조건문
+- if
+- else if
+- else
+- switch
+
+## 반복문
+- for
+- for in
+- for of
+- while
+- do while
+- forEach
+- break
+- continue
+```js
+//예제
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+}
+```
+```js
+//예제
+let a = [10, 20, 30, 40];
+for (let i of a) {
+    console.log(i);
+}
+```
+```js
+//예제
+let a = [10, 20, 30, 40];
+for (let i in a) {
+    console.log(i);
+}
+```
+```js
+//예제
+let x = 0;
+while (x < 10) {
+    console.log(x);
+    x++;
+}
+```
+```js
+//예제
+let x = 0;
+do {
+    console.log(x);
+    x++;
+} while (x < 10)
+```
+```js
+//예제
+let a = [10, 20, 30, 40];
+a.forEach(e => console.log(e**2));
+```
+```js
+//예제
+for (let i = 0; i < 10; i++) {
+    if (i == 5) {
+        break;
+    }
+}
+```
+```js
+//예제
+for (let i = 0; i < 10; i++) {
+    if (i == 5) break;
+    console.log(i);
+}
+```
+```js
+//예제
+for (let i = 0; i < 10; i++) {
+    if (i == 5) break;
+    console.log(i);
+}
+```
+```js
+//예제
+for (let i = 0; i < 10; i++) {
+    if (i == 5) continue;
+    console.log(i);
+}
+```
+
+## 함수
+- 함수(파선아실)
+    * 여기서 x, y를 보통 한국에서는 인자
+    * 매개변수(파라미터, parameter) : x, y
+    * 전달인자(아규먼트, argument) : 3, 5
+    * 사용이유
+        1. 재사용성
+        2. 아키텍처 파악
+        3. 유지보수
+        ```js
+        function 땅다지기(){}
+        function 시멘트작업(){}
+        function 철근(){}
+        function 벽돌(){}
+        function 지붕(){}
+        땅다지기()
+        시멘트작업()
+        철근()
+        벽돌()
+        지붕()
+        ```
+    * 예제
+    ```js
+    function add(x, y){
+        return x + y;
+    }
+
+    add(3, 5)
+
+    function add(a = 100, b = 200) {
+        return a + b;
+    }
+
+    add(10, 20);
+    // 30
+    add(10);
+    // 210
+    add();
+    // 300
+    add(b=300)
+    // 500
+    add(undefined, 300);
+    // 400
+
+    function add({ a = 100, b = 200 }) {
+        console.log(a+b);
+    }
+
+    add({b: 300});
+    ```
+
+- 콜백함수
+    ```js
+    function add(x, y) {
+        return x + y;
+    }
+
+    function mul(x, y) {
+        return x * y;
+    }
+
+    function cal(a, b){
+        return a(10, 10) + b(10, 10);
+    }
+
+    cal(add, mul);
+    ```
+
+
+- 화살표함수
+    ```js
+    function add(x, y) {
+        return x + y
+    }
+
+    let addArrow = (x, y) => x + y;
+    ```
+
+- 기명 함수
+    ```js
+    // 기명 함수
+    let aa = function sum(x, y) {
+        return x + y
+    }
+
+    // 익명 함수인것 같지만 바뀜
+    let bb = function(x, y) {
+        return x + y
+    }
+    // ES5에서는 빈 문자열이었는데 ES6에서 name 값을 가지는 것으로 바뀌었습니다.
+    let cc = (x, y) => x + y;
+    ```
+
+- 익명 함수
+    ```js
+    console.dir(function (x, y) {return x + y;})
+    ```
+
+## 선언
+* let x : 변수로 사용하세요.
+* var x : (전역에서 사용할 변수값, 실무에서 되도록 사용X)
+* const x :(변하지 않는 상수값)
+
+## 전개표현식 사용
+* 전개구문 사용 예제
+    ```js
+    function add(...x){
+        return x;
+    }
+
+    add(1, 2, 3, 4, 5)
+    ```
+
+    ```js
+    // 모던자바스크립트 예제(https://ko.javascript.info/rest-parameters-spread)
+    let arr1 = [1, -2, 3, 4];
+    let arr2 = [8, 3, -8, 1];
+    Math.max(1, ...arr1, 2, ...arr2, 25); // 25
+    ```
+
+    ```js
+    // 모던자바스크립트 예제(https://ko.javascript.info/rest-parameters-spread)
+    let arr = [3, 5, 1];
+    let arr2 = [8, 9, 15];
+
+    let merged = [0, ...arr, 2, ...arr2];
+    ```
+
+## 블록스코프
+* 아래 예제에서hojun이 not defined 되었다고 나옵니다.
+* 참고 블로그 : https://velog.io/@fromzoo/%ED%95%A8%EC%88%98%EC%8A%A4%EC%BD%94%ED%94%84-vs-%EB%B8%94%EB%A1%9D%EC%8A%A4%EC%BD%94%ED%94%84
+    ```js
+    if (true){
+        let hojun = 100;
+    }
+
+    console.log(hojun);
+    ```
+
+## 정규표현식
+* 특정 패턴을 찾아낼 때 사용
+* 연습사이트 : https://regexr.com/5nvc2
+
+## 리터럴
+* 리터럴은 코드에 보여지는 타입의 표현을 의미
+* 예를 들어 원래 배열을 생성하려면
+new Array(4,5,6); 이렇게 해야하지만 [4,5,6] 이렇게 만들수도 있는데요. 이렇게 배열을 의미하는 코드( [4,5,6] )를 배열의 리터럴 표현이라고 합니다.
+* 마찬가지로 new Object() 의 리터럴 표현이 {}, new Number(5) 의 리터럴 표현이 5, new String("hello") 의 리터럴 표현이 "hello" 입니다.
+
+## 사용자와 상호작용
+* prompt('hello')
+* comfirm('hello')
+* alert('hello')
+
+## 언패킹
+* 예제
+```js
+for (let [[i, j], k] of [[[1, 2], 2], [[1, 2], 4]]) {
+    console.log(i, j);
+}
+```
+
+## in 연산자
+* true and false
+```js
+'bay' in ["redwood", "bay", "cedar", "oak", "maple"]
+false
+// 배열
+var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+0 in trees         // true를 반환합니다.
+3 in trees         // true를 반환합니다.
+(1 + 2) in trees   // true를 반환합니다. 연산자 우선 순위에 의하여 이 구문의 괄호는 없어도 됩니다.
+6 in trees         // false를 반환합니다.
+"bay" in trees     // false를 반환합니다. 당신은 배열의 내용이 아닌, 인덱스 값을 명시하여야 합니다.
+"length" in trees  // true를 반환합니다. length는 Array(배열) 객체의 속성입니다.
+
+// 미리 정의된 객체
+"PI" in Math       // true를 반환합니다.
+"P" + "I" in Math  // true를 반환합니다.
+
+// 사용자가 정의한 객체
+var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
+"company" in myCar // true를 반환합니다.
+"model" in myCar   // true를 반환합니다
+```
