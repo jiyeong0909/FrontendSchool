@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 추첨기 2</title>
+</head>
+<body>
+    <h1>로또 번호 추첨기 2</h1>
+    <script>
+        var lotto = [];
+        lotto.push(parseInt(Math.random()*45+1));
+        lotto.push(parseInt(Math.random()*45+1));
+        lotto.push(parseInt(Math.random()*45+1));
+        lotto.push(parseInt(Math.random()*45+1));
+        lotto.push(parseInt(Math.random()*45+1));
+        lotto.push(parseInt(Math.random()*45+1));
+        document.write(lotto);
+    </script>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+    배열(Array) : var lotto = [1,2,3,4,5,6];
+    배열 호출 : lotto[0]; => 1을 가져옴
+
+    .push()
+    => 마지막 값 추가
+
+    ** 아래 스크립트 예시 참고 **
+    
+    <script>  // 수업 내용
+        var lotto = [1,2,3,4,5,6];
+        lotto.push(7);
+        // document.write(lotto[3]);
+        document.write(lotto);
+    </script>
+-->

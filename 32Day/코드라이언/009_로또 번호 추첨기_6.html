@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 추첨기 6</title>
+</head>
+<body>
+    <h1>로또 번호 추첨기 6</h1>
+    <script>
+        var lotto = [];
+        while (lotto.length < 6) {
+            var num = parseInt(Math.random() * 45 + 1);
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num);
+            }
+            
+        }
+
+        lotto.sort((a,b)=>a-b);
+        document.write(lotto);
+    </script>
+</body>
+</html>
+
+<!--
+    // 배열 값 정렬
+
+    .sort() : 사전순 정렬
+    .sort((a, b)=>a-b) : 오름차순 정렬
+    .sort((a, b)=>b-a) : 내림차순 정렬
+
+
+    // * 예시코드
+    
+        var lotto = [1,2,3,33,22,11];
+
+        1. lotto.sort();    // 1,11,2,22,3,33
+        2. lotto.sort((a,b)=>a-b);    // 1,2,3,11,22,33
+        3. lotto.sort((a,b)=>a-b);    // 33,22,11,3,2,1
+
+        document.write(lotto);
+-->

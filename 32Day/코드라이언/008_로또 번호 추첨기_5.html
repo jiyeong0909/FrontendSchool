@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 추첨기 5</title>
+</head>
+<body>
+    <h1>로또 번호 추첨기 5</h1>
+    <script>
+        var lotto = [];
+        while (lotto.length < 6) {
+            // lotto의 length가 6보다 작을 때까지 아래 코드를 동작시킨다.
+            // while문 -> 조건이 충족할 때까지 코드를 실행시킴
+            var num = parseInt(Math.random() * 45 + 1);
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num);
+            }
+            
+        }
+        document.write(lotto);
+    </script>
+</body>
+</html>
+
+
+<!--
+    // 반복문
+    - for문 : 특정 횟수만큼 코드를 동작시킬 때 사용
+    - while문 : 특정 조건에 충족될 때까지 코드 실행
+
+    while (조건) {
+        반복하려는 코드
+    }
+
+    .length 
+    => 배열의 길이
+
+-->

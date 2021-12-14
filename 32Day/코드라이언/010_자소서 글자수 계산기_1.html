@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자소서 글자수 계산기</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        h1 {
+            margin-top: 30px;
+        }
+        #count {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>자기소개</h1>
+    <textarea class="form-control" id="jasoseol" rows="3">코드라이언 인강 수강 중</textarea>
+    <script>
+        var content = document.getElementById('jasoseol').value;
+        console.log(content);   // 코드라이언 인강 수강 중
+    </script>
+</body>
+</html>
+
+
+
+<!--
+    // DOM (Document Object Model)
+
+    // getElementById('jasoseol');
+    => 특정 id 를 가진 태그를 선택할 수 있음
+    
+    // getElementById('jasoseol').value;    
+        또는 getElementById('jasoseol').innerHTML;
+    => 태그 안쪽에 있는 값만 따로 가지고 올 수 있음
+
+    console.log('코드라이언')
+    => 콘솔창에 출력됨
+-->
