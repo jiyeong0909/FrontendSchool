@@ -1,0 +1,282 @@
+/*왼쪽 상단 메뉴 버튼 애니메이션*/
+@keyframes ani{
+    0%{opacity: 1; color: white; transform: scale(1);}
+    100%{opacity: 0.5; color: #888; transform: scale(2);}
+}
+
+/* reset */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+img{border: none;}
+
+/* 전체설정 */
+#wrap{
+    width: 100%;
+    height: 100%;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    perspective: 1000px;
+    min-width: 1200px;
+    min-height: 768px;
+}
+
+/* 왼쪽 상단 메뉴 버튼 */
+#btnmenu{
+    position: fixed;
+    top: 70px;
+    left: 40px;
+    width: 50px;
+    height: 80px;
+    text-align: center;
+    animation: ani 0.5s infinite alternate;
+    z-index: 9999;
+}
+#btnmenu a{
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/*메뉴 설정 */
+nav{
+    width: 150px;
+    height: 100%;
+    background: #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: rotateY(120deg); 
+    opacity: 0;
+    transition: 1s;
+    z-index: 99;
+}
+nav.on{ transform: rotateY(15deg); opacity: 1;}
+nav h1{ width: 100px; 
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        margin-left: -50px;
+    }
+nav h1 img{
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+}
+nav ul li{
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+nav ul li a{display: block;}
+nav ul li a:hover{ background: #111; color: #eee;}
+
+/* 섹션 설정 */
+section{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: #555;
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+section.on{transform: rotateY(-10deg);}
+section div{
+    width: 100%;
+    height: 100%;
+    perspective: 700px;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transition: 1.5s;
+}
+section div.on{z-index: 2; opacity: 1;}
+
+/* 박스 텍스트 부분 공통 설정 */
+section div p{
+    overflow: hidden;
+    position: relative;
+    transform: rotateY(180deg);
+    transition: 1.5s;
+}
+section div.on p{transform: rotateY(0deg);}
+section div p strong{
+    font-size: 50px;
+    color: palevioletred;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    text-align: center;
+}
+section div p .memo {
+    font-size: 40px;
+    color: pink;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 1%;
+}
+/* span */
+section div p span{
+    font-size: 25px;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    line-height: 50px;
+}
+section div p .one{
+    font-size: 30px;
+    color: gold;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    line-height: 50px;
+}
+
+
+/* 본문 box1 사이즈 설정과 이미지 추가 */
+.box1> p{
+    width: 25%;
+    height: 25%;
+    float: left;
+}
+.box1> p:nth-child(1){width: 50%; background: #333;}
+.box1> p:nth-child(2){background: url('../image/m1..jpg'); background-size: cover;}
+.box1> p:nth-child(3){background: #444; text-align: center; font-size: 2.5em;}
+.box1> p:nth-child(3) a{
+    color: white;
+    margin-top: 18%;
+    margin-right: 20px;
+    display: inline-block;
+}
+.box1> p:nth-child(4){
+    width: 50%;
+    float: right;
+    height: 50%;
+    background: url('../image/m2..jpg'); 
+    background-size: cover; 
+    }
+.box1> p:nth-child(5){
+    background: url('../image/m3..jpg') no-repeat; 
+    background-size: cover;
+    background-color: #fff;
+    float: right; 
+    }
+.box1> p:nth-child(6){background: #888; float: right;}
+.box1> p:nth-child(7){background: #000; float: right;}
+.box1> p:nth-child(7) video {width: 100%;}
+.box1> p:nth-child(8){
+    background: url('../image/m4..jpg') center;
+    background-size: cover;
+    float: right;
+}
+.box1> p:nth-child(9){background: #444;}
+.box1> p:nth-child(10){
+    width: 50%;
+    background: url('../image/m5..jpg') center;
+    background-size: cover;
+}
+.box1> p:nth-child(11){ 
+                        background: #888;}
+
+
+/* 본문 box2 사이즈 설정과 이미지 추가 */
+.box2 p{ width: 25%;
+        height: 25%;
+        float: left;
+        }
+.box2 p:nth-child(1){
+    background-color: #444;
+}
+.box2> p:nth-child(2){
+    background: url('../image/w1..jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+.box2> p:nth-child(3){
+    width: 50%;
+    background-color: #222;
+}
+
+.box2> p:nth-child(4){
+    height: 50%;
+    background: url('../image/w2..jpg'); 
+    background-size: cover; 
+    }
+.box2> p:nth-child(5){
+    width: 50%; height: 50%;
+    background: url('../image/w3..jpg') no-repeat; 
+    background-size: cover;
+    background-position: center;
+    }
+.box2> p:nth-child(6){
+    background: url('../image/w4..jpg') no-repeat center;
+    background-size: contain;
+}
+
+.box2> p:nth-child(7){background: #555;}
+
+
+.box2> p:nth-child(8){
+    background: url('../image/w5..jpg') center;
+    background-size: cover;
+}
+.box2> p:nth-child(9){background: #444;}
+.box2> p:nth-child(10){
+    background: url('../image/w6..jpg') center;
+    background-size: cover;
+}
+.box2> p:nth-child(11){
+    background: url('../image/w7..jpg') center;
+    background-size: cover;
+}
+
+/* 본문 box3 사이즈 설정과 이미지 추가 */
+.box3 p{ width: 25%;
+    height: 25%;
+    float: left;
+    }
+.box3 p:nth-child(1){
+    width: 50%;
+    height: 100%;
+    background-image: url('../image/k1..jpg');
+    background-size: cover;
+}
+.box3 p:nth-child(2){background-color: #555;}
+.box3 p:nth-child(3){
+    background-image: url('../image/k2..jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.box3 p:nth-child(4){
+    width: 50%; background-color: #222;
+}
+.box3 p:nth-child(5){
+    height: 50%;
+    background-image: url('../image/k3..jpg'); 
+    background-size: cover;
+    }
+.box3 p:nth-child(6){
+    background-color: #777;
+}
+
+.box3 p:nth-child(7){
+    background-image: url('../image/k4..jpg');
+    background-size: cover;
+    background-position: center;
+}
