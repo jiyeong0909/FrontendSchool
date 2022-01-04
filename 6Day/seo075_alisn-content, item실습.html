@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alisn-content, item 실습</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .container {
+            display: flex;
+            height: 300px;
+            /* align-items: stretch; (기본값) */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            background: #000;
+            justify-content: flex-end;
+            /* 가로축(axis)으로 이동 */
+            align-items: center;
+            /* 세로축(cross-axis)으로 이동 */
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background: pink;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</body>
+</html>

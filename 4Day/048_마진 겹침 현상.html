@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 겹침 현상</title>
+    <style>
+        div {
+            width:100px;
+            height:100px;
+            border:1px solid black;
+        }
+
+        .parent {
+            background-color:yellow;
+            padding-left: 10px;
+        }
+        .child {
+            width:100px;
+            height:100px;
+            margin-top:50px;
+            background-color:red;
+            /* background-color(요소의 배경색)은 color(글씨색,장식부분)랑 다른 개념 */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <!-- padding을 고려하여 적용됨(부모의 왼쪽 상단 기준) -->
+    </div>
+</body>
+</html>

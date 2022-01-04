@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        a[href="http://www.paullab.co.kr"] {
+            font-size: 48px;
+        }
+        /* a[href~="paul"] {
+            font-wight: normal;
+        } */
+        a[href*="paul"] {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.paullab.co.kr">클릭해!</a>
+    <a href="#">클릭해!</a>
+    <!-- <a> 요소(앵커 요소)는 href 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. <a> 안의 콘텐츠는 링크 목적지의 설명을 나타내야 합니다. -->
+    <!-- [href] URL 인터페이스의 href 속성은 전체 URL을 담은 USVString입니다. -->
+</body>
+</html>
